@@ -1,4 +1,4 @@
-package com.ds.dfsmmybatis;
+package com.ds.dfsm.dao;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

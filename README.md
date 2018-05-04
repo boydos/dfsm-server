@@ -1,5 +1,5 @@
 ##简介
->分布式文件管理系统，采用SpringBoot、MyBatis、Redis、RabbitMQ、Hadoop、MongDB，
+>分布式文件管理系统，采用SpringBoot、MyBatis、Druid、MySQL、Redis、RabbitMQ、Hadoop、MongDB，
 
 >目的：练习分布式编程技术
 
@@ -13,7 +13,7 @@
 
 ##表划分
 - user
-> id name nickname password role createdate modifydate
+> id name nickname password role is_deleted gmt_create gmt_modify
 
 - file
-> id name size path description createdate modifydate
+> id name size path description is_deleted gmt_create gmt_modify

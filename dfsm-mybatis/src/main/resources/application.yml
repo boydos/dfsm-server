@@ -1,0 +1,45 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: dfsm-mybatis
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/dfsm?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    username: root
+    password: 123456
+
+druid:
+  initial-size: 1
+  max-active: 20
+  min-idle: 1
+  max-wait: 60000
+  time-between-eviction-runs-millis: 60000
+  min-evictable-idel-time-millis: 300000
+  validation-query: select 'x'
+  test-while-idle: true
+  test-on-borrow: false
+  test-on-return: false
+  max-pool-perconnection-size: 20
+  pool-prepared-statements: true
+  filters: stat
+
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.ds.dfsm.pojo
+
+pagehelper:
+  help-dialect: mysql #oracle, mysql, mariadb, sqlite, hsqldb, postgresql, db2, sqlserver, informix, h2, sqlserver2012, derby
+  reasonable: true
+  support-methods-arguments: true
+  params: count=countSql
+  returnPageInfo: check
+
+mapper:
+  mappers: com.ds.dfsm.dao
+  not-empty: false
+  identify: MySQL
+
+
+
