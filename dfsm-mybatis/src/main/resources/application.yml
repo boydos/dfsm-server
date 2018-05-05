@@ -6,7 +6,7 @@ spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://localhost:3306/dfsm?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true
+    url: jdbc:mysql://localhost:3306/dfsm?useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&tinyInt1isBit=false
     username: root
     password: 123456
 
@@ -16,7 +16,7 @@ druid:
   min-idle: 1
   max-wait: 60000
   time-between-eviction-runs-millis: 60000
-  min-evictable-idel-time-millis: 300000
+  min-evictable-idle-time-millis: 300000
   validation-query: select 'x'
   test-while-idle: true
   test-on-borrow: false

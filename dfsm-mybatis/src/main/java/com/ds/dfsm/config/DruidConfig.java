@@ -17,27 +17,27 @@ public class DruidConfig {
 
     private static Logger logger = LoggerFactory.getLogger(DruidConfig.class);
 
-    @Value("${spring.datasource.driver-class-name}")
+    @Value("${spring.datasource.driver-class-name:}")
     private String driverClassName;
 
-    @Value("${spring.datasource.url}")
+    @Value("${spring.datasource.url:}")
     private String jdbcUrl;
 
-    @Value("${spring.datasource.username}")
+    @Value("${spring.datasource.username:}")
     private String userName;
 
-    @Value("${spring.datasource.password}")
+    @Value("${spring.datasource.password:}")
     private String password;
 
     //customer config
 
-    @Value("${druid.initial-size}")
+    @Value("${druid.initial-size:0}")
     private int initialSize;
 
     @Value("${druid.max-active:8}")
     private int maxActive;
 
-    @Value("${druid.min-idle}")
+    @Value("${druid.min-idle:0}")
     private int minIdle;
 
     @Value("${druid.max-wait:-1}")
@@ -46,31 +46,31 @@ public class DruidConfig {
     @Value("${druid.time-between-eviction-runs-millis:60000}")
     private long timeBetweenEvictionRunsMillis;
 
-    @Value("${druid.min-evictable-idel-time-millis:1800000}")
+    @Value("${druid.min-evictable-idle-time-millis:1800000}")
     private long minEvictableIdleTimeMillis;
 
-    @Value("${druid.validation-query}")
+    @Value("${druid.validation-query:}")
     private String validationQuery;
 
     @Value("${druid.test-while-idle:true}")
     private boolean testWhileIdle;
 
-    @Value("${druid.test-on-borrow}")
+    @Value("${druid.test-on-borrow:false}")
     private boolean testOnBorrow;
 
-    @Value("${druid.test-on-return}")
+    @Value("${druid.test-on-return:false}")
     private boolean testOnReturn;
 
     @Value("${druid.max-pool-perconnection-size:10}")
     private int maxPoolPerConnectionSize;
 
-    @Value("${druid.pool-prepared-statements}")
+    @Value("${druid.pool-prepared-statements:false}")
     private boolean poolPreparedStatements;
 
-    @Value("${druid.filters}")
+    @Value("${druid.filters:}")
     private String filters;
 
-    @Value("${druid.connection-properties}")
+    @Value("${druid.connection-properties:}")
     private Properties connectionProperties;
 
 
